@@ -18,6 +18,16 @@ forLoop(array);
 
 //Write a function, called whileLoop that takes an array as a parameter, runs the array through a while (...) loop and does a console.log() of each element.
 
+function whileLoop(array) {
+  let i = 0;
+  while (i < array.length) {
+    console.log(array[i]);
+    i++;
+  }
+}
+
+whileLoop(array);
+
 //Implement.map()
 
 //Implement .filter()
