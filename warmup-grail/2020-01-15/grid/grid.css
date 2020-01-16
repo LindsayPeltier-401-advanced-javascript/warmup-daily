@@ -1,0 +1,20 @@
+/* Credit CSS Tricks */
+
+.holy-grail {
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+  grid-template-rows: 125px 1fr 125px;
+  grid-gap: 0.5em;
+  height: 100vh;
+}
+
+header,
+footer {
+  grid-column: 1 / 4;
+  border: 1px solid mediumvioletred;
+}
+
+aside,
+article {
+  border: 1px solid mediumslateblue;
+}
