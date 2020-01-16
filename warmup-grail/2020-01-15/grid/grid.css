@@ -1,3 +1,5 @@
+/* Credit CSS Tricks */
+
 .holy-grail {
   display: grid;
   grid-template-columns: 250px 1fr 250px;

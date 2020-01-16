@@ -1,0 +1,36 @@
+body {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.sidebar-left {
+  background-color: lightgray;
+  border: 1px solid grey;
+  float: left;
+  width: 25%;
+  height: 280px;
+}
+article {
+  border: 1px solid black;
+  float: left;
+  width: 49%;
+  height: 280px;
+}
+.sidebar-right {
+  background-color: lightgray;
+  border: 1px solid grey;
+  float: left;
+  width: 25%;
+  height: 280px;
+}
+footer {
+  clear: both;
+  border: 1px solid red;
+  height: 125px;
+  width: 100%;
+}
+header {
+  border: 1px solid red;
+  height: 125px;
+  width: 100%;
+}
