@@ -56,8 +56,6 @@ var reducer = (accumulator, current) => {
 
 console.log(reduce(array, reducer));
 
-// Objects
-
 const people = ['squirrel', 'chipmunk', 'meerkat'];
 
 const stuff = {
