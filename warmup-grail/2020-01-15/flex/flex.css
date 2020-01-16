@@ -1,0 +1,42 @@
+.holy-grail {
+  min-height: 100vh;
+}
+
+.holy-grail,
+.holy-grail-content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+article {
+  flex: 1 1 auto;
+  border: 1px solid black;
+}
+
+.sidebar-left {
+  order: -1;
+  border: 1px solid orange;
+  width: 250px;
+}
+
+@media (min-width: 768px) {
+  .holy-grail-content {
+    flex-direction: row;
+  }
+
+  .sidebar-right {
+    flex: 0 0 260px;
+    border: 1px solid black;
+  }
+}
+
+header {
+  height: 125px;
+  border: 1px solid red;
+}
+
+footer {
+  height: 125px;
+  border: 1px solid purple;
+}
