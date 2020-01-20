@@ -85,3 +85,15 @@ let newPeople = [];
 const newStuff = {};
 let newState = {};
 
+//Spread and destructuring
+let newPeople = ['Betty', ...people, 'BamBam'];
+
+const newStuff = { ...stuff, cars: [ ...stuff.cars, 'Bug']};
+
+const state = {people, stuff};
+
+let newState = {
+  ...state,
+  people: ['Betty', ...people, 'BamBam'],
+  stuff: { ...stuff, cars: [...stuff.cars, 'Bug']}
+};
