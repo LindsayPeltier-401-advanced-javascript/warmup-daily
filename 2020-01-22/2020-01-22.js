@@ -62,3 +62,28 @@ console.log(reduce(array, reducer));
 
 /* Objects --------------------------------------------*/
 
+const people = ['Buffy', 'Xander', 'Willow'];
+
+const stuff = {
+  breakfast: 'waffles',
+  lunch: 'soup',
+  dinner: 'salad',
+  dessert: ['cake', 'pie']
+};
+
+let state = {};
+
+let newPeople = [];
+const newStuff = {};
+let newState = {};
+
+let newPeople = ['Spike', ...people, 'Angel'];
+const NewStuff = { ...stuff, dessert: [...stuff.dessert, 'ice cream'] };
+
+const state = { people, stuff };
+
+let newState = {
+  ...state,
+  people: ['Spike', ...people, 'Angel'],
+  stuff: { ...stuff, dessert: [...stuff.dessert, 'ice cream'] }
+};
