@@ -21,3 +21,42 @@ function whileLoop(array) {
 }
 
 whileLoop(array);
+
+function map(array, callback) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(callback(array[i]));
+  }
+  return newArray;
+}
+
+map(array, x => (x += 1));
+
+
+function filter(array, callback) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i])) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+
+filter(array, n => n === 1);
+
+
+function reduce(array, callback) {
+  let newValue = 0;
+  for (let i = 0; i < array.length; i++) {
+    newValue = callback(newValue, array[i]);
+  }
+  return newValue;
+}
+
+var reducer = (accumulator, current) => {
+  return (accumulator += current);
+};
+
+console.log(reduce(array, reducer));
+
