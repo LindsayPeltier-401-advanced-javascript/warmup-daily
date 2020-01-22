@@ -14,7 +14,6 @@ function forLoop(array) {
 forLoop(array);
 
 // WhileLoop
-
 function whileLoop(array) {
   let i = 0;
   while (i < array.length) {
@@ -25,3 +24,27 @@ function whileLoop(array) {
 
 whileLoop(array);
 
+// Map
+function map(array, callback) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(callback(array[i]));
+  }
+  return newArray;
+}
+
+map(array, x => (x += 1));
+
+// Filter
+function filter(array, callback) {
+  const newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i])) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+filter(array, n => n === 3);
+
+// Reduce
