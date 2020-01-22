@@ -1,7 +1,5 @@
 'use strict';
 
-//Create an Array of numbers, 1 - 10
-
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function forLoop(array) {
@@ -32,7 +30,6 @@ function map(array, callback) {
 
 map(array, x => (x += 1));
 
-
 function filter(array, callback) {
   const newArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -44,7 +41,6 @@ function filter(array, callback) {
 }
 
 filter(array, n => n === 1);
-
 
 function reduce(array, callback) {
   let newValue = 0;
@@ -60,3 +56,29 @@ var reducer = (accumulator, current) => {
 
 console.log(reduce(array, reducer));
 
+const people = ['Fred', 'Barney', 'Wilma'];
+
+const stuff = {
+  tv: 'small',
+  radio: 'ipod',
+  toothbrush: 'electric',
+  cars: ['Corvette', 'Jeep']
+};
+
+let state = {};
+
+let newPeople = [];
+const newStuff = {};
+let newState = {};
+
+let newPeople = ['Betty', ...people, 'BamBam'];
+
+const newStuff = { ...stuff, cars: [...stuff.cars, 'Bug'] };
+
+const state = { people, stuff };
+
+let newState = {
+  ...state,
+  people: ['Betty', ...people, 'BamBam'],
+  stuff: { ...stuff, cars: [...stuff.cars, 'Bug'] }
+};
