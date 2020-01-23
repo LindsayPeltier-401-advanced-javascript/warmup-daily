@@ -57,3 +57,30 @@ var reducer = (accumulator, current) => {
 };
 console.log(reduce(array, reducer));
 
+/* OBJECTS -------------------------------------------------*/
+
+const people = ['Santa', 'Easter Bunny', 'Sandman'];
+
+const stuff = {
+  breakfast: 'waffles',
+  lunch: 'soup',
+  dinner: 'salad',
+  dessert: ['cake', 'pie']
+};
+
+let state = {};
+
+let newPeople = [];
+const newStuff = {};
+let newState = {};
+
+let newPeople = ['4th of July Wizard', ...people, 'Jack Frost'];
+const NewStuff = { ...stuff, dessert: [...stuff.dessert, 'ice cream'] };
+
+const state = { people, stuff };
+
+let newState = {
+  ...state,
+  people: ['4th of July Wizard', ...people, 'Jack Frost'],
+  stuff: { ...stuff, dessert: [...stuff.dessert, 'ice cream'] }
+};
