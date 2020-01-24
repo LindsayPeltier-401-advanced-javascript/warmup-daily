@@ -27,6 +27,32 @@ fetchPeopleWithPromises()
   .then(people => console.log({ people }));
 
 
+// Async
+
+const fetchPeopleWithAsync = async () => {
+  const peopleSet = await superagent.get('https://swapi.co/api/people/');
+
+  const people = (peopleSet.body && peopleSet.body.results) || [];
+
+  const peopleRequests = people.map((person) => {
+    return superagent.get(person.url)
+  });
+
+  const names = await Promise.all(peopleRequests)
+    .then(people => {
+      let names = [];
+      for (let data of people) {
+        names.push(data.body.name);
+      }
+      return names;
+    });
+
+  return names;
+};
+
+fetchPeopleWithAsync()
+  .then(peple => console.log({ people }));
+
 
 
 
