@@ -11,3 +11,13 @@ function forLoop(array) {
 }
 forLoop(array);
 
+// whileLoop
+function whileLoop(array) {
+  let i = 0;
+  while (i < array.length) {
+    console.log(array[i]);
+    i++;
+  }
+}
+whileLoop(array);
+
