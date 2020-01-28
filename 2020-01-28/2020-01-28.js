@@ -30,3 +30,16 @@ function map(array, callback) {
   return newArray;
 }
 map(array, x => (x += 15));
+
+// Filter
+function filter(array, callback) {
+  const newArry = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i])) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+}
+filter(array, n => n === 1);
+
