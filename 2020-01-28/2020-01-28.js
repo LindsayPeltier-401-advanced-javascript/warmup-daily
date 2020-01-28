@@ -55,3 +55,29 @@ var reducer = (accumulator, current) => {
   return (accumulator += current);
 };
 console.log(reduce(array, reducer));
+
+// Objects ------------------------------------>
+
+const people = ['Bart', "Lisa", "Maggie"];
+
+const stuff = {
+  tv: 'small',
+  radio: 'ipod',
+  toothbrush: 'electric',
+  cars: ['Jeep', 'Batmobile']
+};
+
+let state = {};
+let newPeople = [];
+const newStuff = {};
+let newState = {};
+
+let newPeople = ['Marge', ...people, 'Homer'];
+const state = { people, stuff };
+
+let newState = {
+  ...state,
+  people: ['Marge', ...people, 'Homer'],
+  stuff: { ...stuff, cars: [...stuff.cars, "Camaro"] }
+};
+
