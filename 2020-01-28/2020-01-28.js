@@ -43,3 +43,15 @@ function filter(array, callback) {
 }
 filter(array, n => n === 1);
 
+// Reduce
+function reduce(array, callback) {
+  let newValue = 0;
+  for (let i = 0; i < array.length; i++) {
+    newValue = callback(newValue, array[i]);
+  }
+  return newValue;
+}
+var reducer = (accumulator, current) => {
+  return (accumulator += current);
+};
+console.log(reduce(array, reducer));
