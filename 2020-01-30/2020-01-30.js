@@ -6,7 +6,7 @@ let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 //forLoop
 function forLoop(array) {
   for (let i = 0; i <= array.length; i++) {
-    console.log(arra[i]);
+    console.log(array[i]);
   }
 }
 forLoop(array);
@@ -82,4 +82,3 @@ let newState = {
   people: ['Catwoman', ...people, "Joker"],
   stuff: { ...stuff, cars: [...stuff.cars, "BatWing"] }
 };
-
